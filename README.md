@@ -10,16 +10,16 @@ This repository is for the validation and replication of results from the How to
 **On chain** data was collected using [cryo](https://github.com/paradigmxyz/cryo)
 
 Collected cryo datasets:
-- blocks
-- contracts
-- logs
-- state diffs
+- `blocks`
+- `contracts`
+- `logs`
+- `state_diffs`
 
-**Node client** data was collected from the documentation and user reports from each node client. These numbers are compiled into [this spreadsheet]().
+**Node client** data was gathered from 1) node client documentation and 2) user reports. These numbers are compiled into [this spreadsheet](https://docs.google.com/spreadsheets/d/1NxyLBqPX6JVMqGqb-kVcWCN0bm8eXmxZmvrKqAS6Xw4/edit#gid=0).
 
 ### Data processing
 
-State growth computed using the state diffs dataset as the number of storage slots changing from a zero value to a non-zero value, minus the number of storage slots changing from a non-zero value to a zero value.
+State growth was computed using the `state_diffs` dataset. State growth was defined as the number of storage slots changing from a zero value to a non-zero value, minus the number of storage slots changing from a non-zero value to a zero value.
 - For **Figure 2**, state growth is computed for each contract and then summed for each hierarchical category.
 - For **Figure 3**, state growth is computed for each contract category for each month of Ethereum's history.
 
@@ -29,7 +29,7 @@ Data was visualized using [plotly](https://plotly.com/)
 
 ## Labels
 
-Labels were compiled from many different sources on a best effort basis. This is not a complete collection of tags. If you would like to suggest a correction or improvement to the labels, please file a PR.
+Labels were compiled from many different sources. They are collected on a best effort basis and they do not cover all addresses. If you would like to suggest a correction or improvement to the labels, please file a PR.
 
 Contract addressess were divided into the following 10 categories:
 - ERC-20: contracts that have emitted a `Transfer(address indexed, address indexed, uint256 indexed)`
@@ -42,7 +42,7 @@ Contract addressess were divided into the following 10 categories:
 - Scam / Scheme: known scams, MLM schemes, or other protocols of a similar flavor
 - Other: everything else, including addresses that could not be identified
 
-Contracts were taken to be non-overlapping. A small portion of ERC-20 tokens were categorized under DeFi / DEX instead of the ERC-20 because it is a more specific fit (e.g. Uniswap pools).
+Categories were taken to be non-overlapping. A small portion of ERC-20/ERC-721 tokens were categorized under DeFi / DEX instead of the ERC-20 because it is a more specific fit (e.g. Uniswap pools).
 
 The contracts of each protocol were identified using a variety of sources including:
 - on chain logs
