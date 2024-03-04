@@ -1,7 +1,9 @@
 
 # How to Raise the Gas Limit
 
-This repository is for the validation and replication of results from the How to Raise the Gas Limit blogpost series. This repository is not intended to be a versatile software library.
+This repository is for the validation and replication of results from the How to Raise the Gas Limit blogpost series.
+
+*This repository is not intended to be a versatile / polished / well-supported software library. In the future, the reusable portions of this code may be assembled into such a library.*
 
 ## Methodology
 
@@ -9,13 +11,9 @@ This repository is for the validation and replication of results from the How to
 
 **On chain** data was collected using [cryo](https://github.com/paradigmxyz/cryo)
 
-Collected cryo datasets:
-- `blocks`
-- `contracts`
-- `logs`
-- `state_diffs`
+The main relevant cryo datasets are `blocks`, `state_diffs`, and `contracts`. Some additional datasets were used for constructing sets of contract labels. [This script](scripts/collect_data.sh) shows an example of collecting this data.
 
-**Node client** data was gathered from 1) node client documentation and 2) user reports. These numbers are compiled into [this spreadsheet](https://docs.google.com/spreadsheets/d/1NxyLBqPX6JVMqGqb-kVcWCN0bm8eXmxZmvrKqAS6Xw4/edit#gid=0).
+**Node client** data was gathered from 1) node client documentation and 2) user reports. These numbers are compiled into [this spreadsheet](https://docs.google.com/spreadsheets/d/1NxyLBqPX6JVMqGqb-kVcWCN0bm8eXmxZmvrKqAS6Xw4/edit#gid=0). A csv version of the reth data is saved in the `./data` directory.
 
 ### Data processing
 
@@ -23,9 +21,15 @@ State growth was computed using the `state_diffs` dataset. State growth was defi
 - For **Figure 2**, state growth is computed for each contract and then summed for each hierarchical category.
 - For **Figure 3**, state growth is computed for each contract category for each month of Ethereum's history.
 
+[This notebook](notebooks/htrtgl_extract_monthly_data.ipynb) shows how data was preprocessed, and [this notebook](notebooks/htrtgl_state_growth_figures.ipynb) shows how figures were generated.
+
 ### Data visualization
 
 Data was visualized using [plotly](https://plotly.com/)
+
+### Code
+
+Many of the utilities for processing and pipelining the data are gathered into [this repository](https://github.com/paradigmxyz/state_growth).
 
 ## Labels
 
@@ -54,4 +58,6 @@ The contracts of each protocol were identified using a variety of sources includ
 - [address lists](https://blockchaingame.world/addresses)
 - [tag datasets](https://www.kaggle.com/datasets/hamishhall/labelled-ethereum-addresses)
 - [tag databases](https://www.walletlabels.xyz/)
+
+Some of the tags are in the [`state_growth`]() repo, others are in [this notebook](notebooks/htrtgl_labels.ipynb).
 

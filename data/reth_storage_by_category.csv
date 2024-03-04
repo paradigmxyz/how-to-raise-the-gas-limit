@@ -1,0 +1,27 @@
+Table Category,Scales with # of,Table Name,# Entries,Branch Pages,Leaf Pages,Overflow Pages,Size
+Archive,Account changes,AccountChangeSet,"2,889,523,099",12186621,37374013,0,189.1 GiB
+Archive,Account changes,AccountHistory,"275,568,994",192433,16203579,534179,64.6 GiB
+State,Accounts,AccountsTrie,"20,641,630",5875,812032,0,3.1 GiB
+History,Blocks,BlockBodyIndices,"19,186,100",509,113412,0,445 MiB
+History,Blocks,BlockOmmers,"1,209,744",844,188675,0,740.3 MiB
+History,Blocks,BlockWithdrawals,"2,151,160",1374,307304,0,1.2 GiB
+State,Contracts,Bytecodes,"1,202,964",1644,105390,2656478,10.5 GiB
+History,Blocks,CanonicalHeaders,"19,186,100",3851,464538,0,1.8 GiB
+State,Accounts,HashedAccount,"233,409,346",75219,4536643,0,17.6 GiB
+State,Storage slots,HashedStorage,"1,110,497,201",684034,21068675,0,83 GiB
+History,Blocks,HeaderNumbers,"19,186,100",4651,343993,0,1.3 GiB
+History,Blocks,HeaderTD,"19,186,100",623,139137,0,545.9 MiB
+History,Blocks,Headers,"19,186,100",42351,4781400,0,18.4 GiB
+State,Accounts,PlainAccountState,"233,409,346",39138,3521326,0,13.6 GiB
+State,Storage slots,PlainStorageState,"1,110,497,201",717302,23472716,0,92.3 GiB
+-,-,PruneCheckpoints,,0,0,0,0 B
+Archive,Receipts,Receipts,"2,254,509,805",303967,68088102,1813776,267.8 GiB
+Archive,Storage changes,StorageChangeSet,"5,016,507,328",3585922,84992558,0,337.9 GiB
+Archive,Storage changes,StorageHistory,"1,407,230,291",2830024,101633578,912472,402 GiB
+State,Storage slots,StoragesTrie,"97,114,930",590062,5325502,0,22.6 GiB
+-,-,SyncStage,13,0,1,0,4 KiB
+-,-,SyncStageProgress,1,0,1,0,4 KiB
+History,Transactions,TransactionBlock,"17,549,307",504,112496,0,441.4 MiB
+History,Transactions,Transactions,"2,254,509,805",477639,106990409,49558391,599 GiB
+History,Transactions,TxHashNumber,"2,254,509,805",568521,40417997,0,156.4 GiB
+History,TxSenders,TxSenders,"2,254,509,805",94066,21070257,0,80.7 GiB
